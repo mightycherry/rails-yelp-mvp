@@ -1,0 +1,10 @@
+<h1>Restaurants#index</h1>
+<% @restaurants.each do |restaurant| %>
+<%= link_to restaurant.name, restaurant_path(restaurant) %>
+
+<%= restaurant.address %>
+
+<%= restaurant.phone_number %>
+<%= link_to "Editer #{restaurant.name}", edit_restaurant_path(restaurant) %>
+
+<% end %>
